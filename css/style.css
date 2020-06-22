@@ -1,0 +1,42 @@
+:root   {
+    --cor-primaria:#45b3d4 !important;
+    --cor-secundaria: #4ea5db ;
+    --cor-complementar: darkgray ;
+}
+.navbar-expand-lg.navbar-dark .navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: var(--cor-primaria);
+}
+a:hover{
+    color: var(--cor-primaria);
+}
+/* CSS Personalizado  */
+.btn-outline-primary{
+    color: #45b3d4 !important;
+    border-color: #45b3d4 !important;
+}
+.bg-gradient{
+    background: linear-gradient(to right, #1673ad 0%, #2a82b9 30%, #45acec 100%) !important;
+}
+.btn-outline-primary:hover{
+    color: #fff !important;
+    background-color: #45b3d4 !important;
+}
+.bg-dark{
+    background-color: #42566b !important;
+}
+.text-primary {
+    color: var(--cor-primaria) !important;
+}
+.border-primary {
+    border-color: rgba(109, 188, 244, 0.35) !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    box-shadow: none;
+}
+.btn-primary:hover{
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
