@@ -15,12 +15,13 @@ a:hover{
     border-color: #45b3d4 !important;
 }
 .bg-gradient{
-    background: linear-gradient(to right, #1673ad 0%, #2a82b9 30%, #45acec 100%) !important;
+    background: linear-gradient(to right, #111112 0%, #2b2c3b 30%, #45acec 100%) !important;
 }
 .btn-outline-primary:hover{
     color: #fff !important;
     background-color: #45b3d4 !important;
 }
+
 .bg-dark{
     background-color: #42566b !important;
 }
