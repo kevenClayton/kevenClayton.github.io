@@ -17,6 +17,12 @@ a:hover{
 .bg-gradient{
     background: linear-gradient(to right, #111112 0%, #2b2c3b 30%, #45acec 100%) !important;
 }
+.bg-gradient-2{
+    background: linear-gradient(to right, #002840 0%, #005284 30%, #45acec 100%) !important;
+}
+.book-now h1{
+    font-size: 3.5rem;
+}
 .btn-outline-primary:hover{
     color: #fff !important;
     background-color: #45b3d4 !important;
