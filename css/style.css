@@ -275,4 +275,22 @@ select.list-dt:focus {
     width: 100%;
     object-fit: cover
 }
-
+.extra-item i{
+    font-size: 40px;
+}
+.extra-item .card-body{
+    padding: 1.5rem 0.5rem;
+}
+.extra-item a{
+    color: #737491;
+}
+.extra-item a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    border-radius: 0.5rem;
+  
+}
+.extra-item a:hover span{
+    color: white !important;
+}

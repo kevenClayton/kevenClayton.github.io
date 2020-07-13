@@ -107,6 +107,8 @@
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
+
+
     <!-- Google Tag Manager-->
     
   </head>
@@ -356,17 +358,18 @@
                   <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                 </ol>
               </nav>
-              <h1 class="mb-3 pb-4">Checkout</h1>
+              <h1 class="mb-3 pb-4 text-uppercase"> Book <span class="bg-faded-primary rounded text-primary px-3 py-2">your cleaning</span></h1>
               <div class="alert alert-info font-size-md mb-5" role="alert"><i class="fe-alert-circle font-size-xl mt-n1 mr-3"></i>Have a coupon code? <a href='#modal-coupon' data-toggle='modal' class='alert-link'>Click here to enter your code</a></div>
               <h2 class="h3 pb-3"><span class="font-weight-light">STEP 1:</span> WHO YOU ARE</h2>
               <div class="row mb-4">
                 <div class="col-sm-6 form-group">
-                  <label class="form-label" for="ch-fn">First name<sup class="text-danger ml-1">*</sup></label>
-                  <input class="form-control" type="text" id="ch-fn" required>
+                  <label class="form-label" for="ch-fn" >Enter your First Name
+                    <sup class="text-danger ml-1">*</sup></label>
+                  <input class="form-control" placeholder="Enter your First Name" type="text" id="ch-fn" required>
                 </div>
                 <div class="col-sm-6 form-group">
                   <label class="form-label" for="ch-ln">Last names<sup class="text-danger ml-1">*</sup></label>
-                  <input class="form-control" type="text" id="ch-ln" required>
+                  <input class="form-control" placeholder="Insert your Last Name" type="text" id="ch-ln" required>
                 </div>
                 <div class="col-sm-6 form-group">
                   <label class="form-label" for="ch-ln">Email<sup class="text-danger ml-1">*</sup></label>
@@ -393,8 +396,6 @@
                     </div>
                     <input type="phone" class="form-control" placeholder="Insert your contact number here">
                   </div>
-                  
-
                 </div>
                 
                 <div class="col-12 form-group">
@@ -415,6 +416,7 @@
                     <option value="saint-cloud">Saint Cloud</option>
                   </select>
                 </div>
+
                 
                 
                 <div class="col-6 form-group">
@@ -432,101 +434,155 @@
                   <input class="form-control" type="text" id="ch-county">
                 </div>
               </div>
+              <!-- Selecionar os serviços -->
               <div class="row">
-                <div class="col-12 form-group">
+                <div class="col-12 ">
                   <h2 class="h3 pb-3"><span class="font-weight-light">STEP 3:</span> YOUR SERVICE</h2>
-                </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Inside Windows</span>
+                </div>                
+                    <div class="col-6 form-group ">
+                        <label class="form-label" for="ch-country">Choose your service<sup class="text-danger ml-1">*</sup></label>
+                        <select class="form-control custom-select" id="ch-country" required>
+                          <option value="" selected disabled hidden>Select your service type</option>
+                          <option value="0-1000">General Clean</option>
+                          <option value="1001-1500">Deep Clean / Move Out / Party Cleaning</option>
+                          <option value="1501-2000">Hoarding Clean Out / Pos Contruction </option>                                       
+                        </select>
                     </div>
+                    <div class="col-6 form-group ">
+                        <label class="form-label" for="ch-country">Home Square Footage<sup class="text-danger ml-1">*</sup></label>
+                        <select class="form-control custom-select" id="ch-country" required>
+                          <option value="" selected disabled hidden>Select the footage of your property</option>
+                          <option value="0-1000">0 - 1000m²</option>
+                          <option value="1001-1500">1001 - 1500m²</option>
+                          <option value="1501-2000">1501 - 2000m²</option>
+                          <option value="2001-2500">2001 - 2500m²</option>
+                          <option value="2501-3000">2501 - 3000m²</option>
+                          <option value="3001-3500">3001 - 3500m²</option>
+                          <option value="3501-4000">3501 - 4000m²</option>
+                          <option value="4001-4500">4001 - 4500m²</option>
+                          <option value="4501-5000">4501 - 5000m²</option>                      
+                          <option value="4501-5000">Greater Than 5000</option>                      
+                        </select>
+                    </div>
+                <!-- Section Serviços Extras e datas-->
+                <div class="col-12 ">
+                    <!-- <label class="form-label" for="ch-country">Select Extras</label> -->
+                    <h2 class="h3 pb-3"><span class="font-weight-light">Select</span> Extras</h2>
+                </div>                                
+                <div class="col-4   ">
+                  <div class="card border border-dark mb-4 extra-item">
+                    <a href="#">
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Inside Windows</span>
+                        </div>
+                    </a>
                   </div>
                 </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Inside Cabinets</span>
-                    </div>
+                <div class="col-4  ">
+                  <div class="card border border-dark mb-4 extra-item" data-toggle="tooltip" data-placement="top" title="Include in your cleaning service the cleaning of your window">
+                    <a href="#">
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Inside Cabinets</span>
+                        </div>
+                    </a>
                   </div>
                 </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Baseboards</span>
-                    </div>
+                <div class="col-4  ">
+                  <div class="card border border-dark mb-4 extra-item">
+                      <a href="#">
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Baseboards</span>
+                        </div>
+                    </a>
                   </div>
                 </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Inside the Fridge</span>
-                    </div>
+                <div class="col-4  ">
+                  <div class="card border border-dark mb-4 extra-item">
+                    <a href="#" >        
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Inside the Fridge</span>
+                        </div>
+                    </a>
                   </div>
                 </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Move In / Move Out</span>
+                <!-- <div class="col-3  ">
+                    <div class="card border border-dark mb-4 extra-item">
+                        <a href="#" >        
+                            <div class="card-body text-center">
+                            <p class="card-text font-size-xl">
+                                <i class="fe-bell"></i>
+                            </p>
+                            <span class="text-muted font-size-md">Move In / Move Out</span>
+                            </div>
+                        </a>
                     </div>
+                </div> -->
+                <div class="col-4  ">
+                
+                  <div class="card border border-dark mb-4  extra-item ">
+                    <a href="#" >
+                        <div class="card-body text-center ">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Inside the Oven</span>
+                        </div>
+                    </a>
+                  </div>
+               
+                </div>
+                <!-- <div class="col-3 ">
+                  <div class="card border border-dark mb-4  extra-item">
+                    <a href="">
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Deep Cleaning</span>
+                        </div>
+                    </a>
+                  </div>
+                </div> -->
+                <div class="col-4  ">
+                  <div class="card border border-dark mb-4 extra-item">
+                    <a href="#"> 
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Load of Laundry</span>
+                        </div>
+                    </a> 
                   </div>
                 </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Inside the Oven</span>
-                    </div>
+                <!-- <div class="col-3 form-group ">
+                  <div class="card border border-dark mb-4 extra-item">
+                    <a href="#"  >
+                        <div class="card-body text-center">
+                        <p class="card-text font-size-xl">
+                            <i class="fe-bell"></i>
+                        </p>
+                        <span class="text-muted font-size-md">Rent A Vacuum</span>
+                        </div>
+                    </a>
                   </div>
-                </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Deep Cleaning</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Load of Laundry</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3 form-group ">
-                  <div class="card border border-dark mb-4">
-                    <div class="card-body text-center">
-                      <p class="card-text font-size-xl">
-                        <i class="fe-bell"></i>
-                      </p>
-                      <span class="text-muted font-size-xs">Rent A Vacuum</span>
-                    </div>
-                  </div>
-                </div>
+                </div> -->
             </div>
+            
+            
+            <!-- FIM Section Serviços extras e data -->
               <h2 class="h3 pb-3">Additional information</h2>
               <div class="form-group pb-3 pb-lg-5">
                 <label class="form-label" for="ch-order-notes">Order notes</label>
@@ -753,6 +809,7 @@
     <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="vendor/parallax-js/dist/parallax.min.js"></script>
     <script src="vendor/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="vendor/flatpickr/dist/plugins/rangePlugin.js"></script>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
     <script src="js/step.js"></script>
