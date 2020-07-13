@@ -20,74 +20,6 @@
     <meta name="msapplication-TileColor" content="#766df4">
     <meta name="theme-color" content="#ffffff">
     <!-- Page loading styles-->
-    <style>
-      .cs-page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .cs-page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .cs-page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .cs-page-loading.active > .cs-page-loading-inner {
-        opacity: 1;
-      }
-      .cs-page-loading-inner > span {
-        display: block;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #737491;
-      }
-      .cs-page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #45b3d4;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      
-    </style>
     <!-- Page loading scripts-->
     <script>
       (function () {
@@ -103,7 +35,7 @@
     </script>
     <!-- Vendor Styles-->
     <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/flatpickr/dist/flatpickr.min.css"/>
+    <link rel="stylesheet" href="vendor/flatpickr/dist/flatpickr.min.css"/>
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
@@ -601,6 +533,19 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-group">
+                    <label>Date range</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary">
+                          <i class="fe-calendar"></i>
+                        </span>
+                      </div>
+                      <input class="form-control cs-date-picker cs-date-range" type="text" placeholder="From date" data-datepicker-options='{"altInput": true, "altFormat": "F j, Y", "dateFormat": "Y-m-d"}' data-linked-input="#end-date">
+                      <input class="form-control cs-date-picker" type="text" placeholder="To date" data-datepicker-options='{"altInput": true, "altFormat": "F j, Y", "dateFormat": "Y-m-d"}' id="end-date">
+                    </div>
+                  </div>
                 
   
               </div>
@@ -810,6 +755,7 @@
     <script src="vendor/parallax-js/dist/parallax.min.js"></script>
     <script src="vendor/flatpickr/dist/flatpickr.min.js"></script>
     <script src="vendor/flatpickr/dist/plugins/rangePlugin.js"></script>
+    
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
     <script src="js/step.js"></script>
